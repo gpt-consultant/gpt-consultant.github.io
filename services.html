@@ -1,0 +1,157 @@
+<!DOCTYPE html><html data-bs-theme="light" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>GPTConsultant</title><link rel="canonical" href="https://gptconsultant.io/services.html"><meta property="og:url" content="https://gptconsultant.io/services.html"><meta name="twitter:description" content="Master AI with GPT Consultant's bespoke GPT solutions and deep expertise. Lead in the GPT Store era with innovative, custom development and unique market insights. Connect with our vibrant AI community for cutting-edge discussions. Start your tailored AI journey with us today!"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://gptconsultant.io/assets/img/logo_black.svg"><meta property="og:type" content="website"><meta name="description" content="Master AI with GPT Consultant's bespoke GPT solutions and deep expertise. Lead in the GPT Store era with innovative, custom development and unique market insights. Connect with our vibrant AI community for cutting-edge discussions. Start your tailored AI journey with us today!"><meta property="og:image" content="https://gptconsultant.io/assets/img/logo_black.svg"><meta name="twitter:title" content="GPTConsultant">
+			<script>
+(function() {
+
+	// JavaScript snippet handling Dark/Light mode switching
+
+	const getStoredTheme = () => localStorage.getItem('theme');
+	const setStoredTheme = theme => localStorage.setItem('theme', theme);
+	const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+	const getPreferredTheme = () => {
+
+		if (forcedTheme) return forcedTheme;
+
+		const storedTheme = getStoredTheme();
+		if (storedTheme) {
+			return storedTheme;
+		}
+
+		const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+		if (pageTheme) {
+			return pageTheme;
+		}
+
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	}
+
+	const setTheme = theme => {
+		if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.documentElement.setAttribute('data-bs-theme', 'dark');
+		} else {
+			document.documentElement.setAttribute('data-bs-theme', theme);
+		}
+	}
+
+	setTheme(getPreferredTheme());
+
+	const showActiveTheme = (theme, focus = false) => {
+		const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+		if (!themeSwitchers.length) return;
+
+		document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+			element.classList.remove('active');
+			element.setAttribute('aria-pressed', 'false');
+		});
+
+		for (const themeSwitcher of themeSwitchers) {
+
+			const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+			if (btnToActivate) {
+				btnToActivate.classList.add('active');
+				btnToActivate.setAttribute('aria-pressed', 'true');
+			}
+		}
+	}
+
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+		const storedTheme = getStoredTheme();
+		if (storedTheme !== 'light' && storedTheme !== 'dark') {
+			setTheme(getPreferredTheme());
+		}
+	});
+
+	window.addEventListener('DOMContentLoaded', () => {
+		showActiveTheme(getPreferredTheme());
+
+		document.querySelectorAll('[data-bs-theme-value]')
+			.forEach(toggle => {
+				toggle.addEventListener('click', (e) => {
+					e.preventDefault();
+					const theme = toggle.getAttribute('data-bs-theme-value');
+					setStoredTheme(theme);
+					setTheme(theme);
+					showActiveTheme(theme);
+				})
+			})
+	});
+})();
+</script><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/favicon_180.png?h=cdebbd3ae76803936d3b4ed4161af93c"><link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_16.png?h=cdebbd3ae76803936d3b4ed4161af93c"><link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_16.png?h=cdebbd3ae76803936d3b4ed4161af93c" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_32.png?h=cdebbd3ae76803936d3b4ed4161af93c"><link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_32.png?h=cdebbd3ae76803936d3b4ed4161af93c" media="(prefers-color-scheme: dark)"><link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon_180.png?h=cdebbd3ae76803936d3b4ed4161af93c"><link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon_180.png?h=cdebbd3ae76803936d3b4ed4161af93c"><link rel="icon" type="image/png" sizes="256x256" href="assets/img/logo_mk1_256px.png?h=ad5e9846d01a1def9365cbe6575a3975"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><link rel="stylesheet" href="assets/css/styles.min.css?h=0a537a44f222162ec09bab574d8f3f1a"></head><body><nav class="navbar navbar-expand-md bg-body py-3"><div class="container"><a class="navbar-brand d-flex align-items-center" href="/#"><span class="bs-icon-lg bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><img src="assets/img/logo_white.svg?h=943479614ec1a34550389207a81ede2d" style="width: 95px;" alt="Cute robot logo"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+  <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+  <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+</svg></span><span><strong>GPT</strong>Consultant</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-2"><div class="theme-switcher dropdown"><a class="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</svg></a><div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+</svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+</svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+  <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+</svg>Auto</a></div></div><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="/#">Home</a></li><li class="nav-item"></li><li class="nav-item"><a class="nav-link active" href="/services.html">Services</a></li><li class="nav-item"><a class="nav-link" href="/about.html">About</a></li><li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li><li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li></ul></div></div></nav><section class="position-relative py-4 py-xl-5"><div class="container py-4 py-xl-5"><div class="row mb-5"><div class="col-md-8 col-xl-6 text-center mx-auto"><h2>Make your mark with GPTs and more</h2><p class="w-lg-50">Transform your vision into reality with custom AI product development and market launch strategies.</p></div></div><div class="row row-cols-1 row-cols-md-2 row-cols-xl-3"><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-hammer">
+  <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Building advanced custom GPTs</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-up">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Enhancing your existing GPT models</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-binoculars">
+  <path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Exploring innovative GPT product ideas</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-server-2">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path>
+  <path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path>
+  <path d="M7 8l0 .01"></path>
+  <path d="M7 16l0 .01"></path>
+  <path d="M11 8h6"></path>
+  <path d="M11 16h6"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Physical deployment and management of LLMs</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-brain">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"></path>
+  <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"></path>
+  <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"></path>
+  <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"></path>
+  <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"></path>
+  <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Traditional AI solutions</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-clipboard-data">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"></path>
+  <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path>
+  <path d="M9 17v-4"></path>
+  <path d="M12 17v-1"></path>
+  <path d="M15 17v-2"></path>
+  <path d="M12 17v-1"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Data analysis</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-server-cog">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path>
+  <path d="M12 20h-6a3 3 0 0 1 -3 -3v-2a3 3 0 0 1 3 -3h10.5"></path>
+  <path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M18 14.5v1.5"></path>
+  <path d="M18 20v1.5"></path>
+  <path d="M21.032 16.25l-1.299 .75"></path>
+  <path d="M16.27 19l-1.3 .75"></path>
+  <path d="M14.97 16.25l1.3 .75"></path>
+  <path d="M19.733 19l1.3 .75"></path>
+  <path d="M7 8v.01"></path>
+  <path d="M7 16v.01"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Web development and managed hosting</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-building-community">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8"></path>
+  <path d="M13 7l0 .01"></path>
+  <path d="M17 7l0 .01"></path>
+  <path d="M17 11l0 .01"></path>
+  <path d="M17 15l0 .01"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">IoT product development</h5></div></div></div><div class="col"><div class="d-flex p-3"><div class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon sm"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-user">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+</svg></div><div class="px-2"><h5 class="mb-0 mt-1">Partial CTO services</h5></div></div></div></div></div><div class="container py-4 py-lg-5"><div class="row justify-content-center"><div class="col-sm-4 col-md-6 text-center text-lg-start d-flex flex-column item"><h3 class="fs-6">Sitemap</h3><ul class="list-unstyled"><li><a class="link-secondary" href="/#">Home</a></li><li><a class="link-secondary" href="services.html">Services</a></li><li><a class="link-secondary" href="about.html">About</a></li><li><a class="link-secondary" href="blog.html">Blog</a></li><li><a class="link-secondary" href="contact.html">Contact</a></li></ul></div><div class="col text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start item social"><div class="d-flex align-items-center mb-2"><span class="bs-icon-md bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2"><img src="assets/img/logo_white.svg?h=943479614ec1a34550389207a81ede2d" style="width: 64px;" alt="Cute robot logo"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+  <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path>
+  <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+</svg></span><span><strong>GPT</strong>Consultant</span></div><p class="text-muted copyright">GPTConsultant Services</p><p class="text-muted copyright">1 MAB EASTERN PROMENADE, TONSLEY South Australia 5042</p></div></div><hr><div class="d-flex justify-content-between align-items-center pt-3"><p class="text-muted mb-0">Copyright © 2024 GPTConsultant</p><ul class="list-inline mb-0"><li class="list-inline-item" href="https://www.linkedin.com/in/luke-ooyendyk/"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-linkedin">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"></path>
+</svg></li><li class="list-inline-item" href="https://github.com/ooyendyk"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+</svg></li><li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-discord">
+  <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"></path>
+</svg></li></ul></div></div></section><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script></body></html>
